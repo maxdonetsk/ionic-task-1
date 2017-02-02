@@ -1,0 +1,13 @@
+/***Ionic***/
+/***Custom***/
+/*mixin for vendor-prefixes
+Example: @include prefix((transform: translateY(-50%)));
+*/
+/*mixin for calc
+Example: @include calc(height, 50% - 10px);
+*/
+/*mixin for rendering choises results styles
+Example: @include choise-results;
+*/
+
+/*# sourceMappingURL=ms-extended.css.map */

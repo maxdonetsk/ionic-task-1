@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;;;;;;;;AAMA,gBAAiB;EACb,OAAO,EAAE,YAAY;;AAGzB,YAAa;EACT,MAAM,EAAE,YAAY;;AAGxB,aAAc;EACV,OAAO,EAAE,YAAY",
+"sources": ["../../scss/partials/ms-base.scss"],
+"names": [],
+"file": "ms-base.css"
+}

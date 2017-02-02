@@ -1,0 +1,24 @@
+<ion-view view-title="{{vm.book.title}}">
+  <ion-content>
+      <div class="row row-center"
+           ng-if="vm.loading">
+          <div class="col col-center">
+              <div class="text-center">
+                  <ion-spinner icon="spiral"></ion-spinner>
+              </div>
+          </div>
+      </div>
+      <div class="row row-center"
+           ng-if="vm.error">
+          <div class="col col-center">
+              <div class="text-center">
+                  {{vm.error}}
+              </div>
+          </div>
+      </div>
+      <div class="padding text-center">
+          <img ng-src="{{vm.book.field_books_image}}" alt="" />
+          <div ng-bind-html="vm.book.html" class="text-left"></div>
+      </div>
+  </ion-content>
+</ion-view>

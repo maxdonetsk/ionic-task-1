@@ -1,0 +1,60 @@
+@import "../../lib/ionic/scss/_variables.scss";
+@import "../../lib/ionic/scss/_mixins.scss";
+
+
+
+/*mixin for vendor-prefixes
+Example: @include prefix((transform: translateY(-50%)));
+*/
+@mixin prefix($scope, $vendors: webkit moz ms o) {
+    @each $prop, $value in $scope {
+        @if $vendors {
+            @each $vendor in $vendors {
+                #{"-" + $vendor + "-" + $prop}: #{$value};
+            }
+        }
+        // Dump regular property anyway
+        #{$prop}: #{$value};
+    }
+}
+
+
+
+/*mixin for calc
+Example: @include calc(height, 50% - #{10px});
+*/
+@mixin calc($property, $expression) {
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+
+
+/*mixin for rendering choises results styles
+Example: @include choise-results;
+*/
+@mixin choise-results {
+    $results: (
+        choise1 #77D9F3,
+        choise2 #FF6DA0,
+        choise3 #FFB65C
+        );
+
+    @each $value in $results {
+        &[data-choise="#{nth($value, 1)}"] {
+            color: nth($value, 2);
+            background-color: lighten(nth($value, 2), 25);
+            border: 1px solid nth($value, 2);
+            border-radius: $card-border-radius;
+
+            svg {
+                fill: nth($value, 2);
+                display: initial;
+            }
+
+            a {
+                color: nth($value, 2);
+            }
+        }
+    }
+}

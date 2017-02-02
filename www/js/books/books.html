@@ -1,0 +1,28 @@
+<ion-view view-title="Books">
+    <ion-content>
+        <div class="row row-center"
+             ng-if="vm.loading">
+            <div class="col col-center">
+                <div class="text-center">
+                    <ion-spinner icon="spiral"></ion-spinner>
+                </div>
+            </div>
+        </div>
+        <div class="row row-center"
+             ng-if="vm.error">
+            <div class="col col-center">
+                <div class="text-center">
+                    {{vm.error}}
+                </div>
+            </div>
+        </div>
+        <div class="list">
+            <a class="item item-thumbnail-left" ng-repeat="book in vm.books" ng-click="vm.showBook(book.nid)">
+                <img ng-src="{{book.field_books_image}}" alt="" />
+                <h2>{{book.title}}</h2>
+                <p>Type: {{book.type}}</p>
+                <p>ID: {{book.nid}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

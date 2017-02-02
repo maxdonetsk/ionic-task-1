@@ -1,0 +1,9 @@
+@import "partials/ms-variables.scss";
+
+/* Ionic (whole) */
+@import "ionic.app.scss";
+
+/* Custom imports */
+@import "partials/ms-base.scss";
+@import "partials/ms-extended.scss";
+@import "ms-custom.scss";
